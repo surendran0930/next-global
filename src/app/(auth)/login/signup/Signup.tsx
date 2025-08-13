@@ -1,0 +1,66 @@
+"use client";
+import { Button } from "@/components/ui/button";
+import InputPassword from "@/components/ui/Inputs/InputPassword";
+import LoginInput from "@/components/ui/Inputs/LoginInput";
+import React, { useState } from "react";
+interface UserData {
+  userName: string;
+  password: string;
+  confirmPassword: string;
+}
+
+const Signup = () => {
+  const [userData, setUserData] = useState<UserData>({
+    userName: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const handleUserData = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setUserData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = () => {
+    console.log(userData, "userData");
+  };
+  return (
+    <div className=" bg-[#E9D3A4] h-[624px] rounded-[36px] flex justify-center ">
+      <div className="flex flex-col justify-center items-center gap-[80px]">
+        <div className="text-[#7B5A14] text-[48px] leading-[68px] text-center">
+          Signup
+        </div>
+        <div className="flex flex-col gap-[60px]">
+          <div className="flex flex-col gap-[40px]">
+            <LoginInput
+              name="userName"
+              label="Username"
+              placeholder="Enter the username"
+              value={userData?.userName}
+              onChange={handleUserData}
+            />
+            <InputPassword
+              name="password"
+              placeholder="Enter the password"
+              label="New Password"
+              value={userData?.password}
+              onChange={handleUserData}
+            />
+            <InputPassword
+              name="confirmPassword"
+              placeholder="Re enter the set password"
+              label="New Password"
+              value={userData?.confirmPassword}
+              onChange={handleUserData}
+            />
+          </div>
+          <div className="flex justify-center">
+            <Button onClick={handleSubmit}>LOGIN</Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Signup;
