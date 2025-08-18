@@ -6,6 +6,7 @@ import Settings from "./Settings";
 import Help from "./Help";
 import ViewEye from "./ViewEye";
 import CloseEye from "./CloseEye";
+import Inbox from "./Inbox";
 export {
   Notification,
   Dashboard,
@@ -15,4 +16,5 @@ export {
   Help,
   ViewEye,
   CloseEye,
+  Inbox,
 };

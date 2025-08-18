@@ -15,7 +15,7 @@ const layout = ({
           <Image alt="Navbar" className="h-[23px]" src={NavBarDes} />
         </div>
       </div>
-      <div className="w-[77%] pt-[33px] pl-[36px] pb-[51px] flex flex-col gap-[113px] ">
+      <div className="w-[77%] pt-[33px] pl-[36px] pb-[51px] flex flex-col gap-[113px] h-dvh ">
         <div className="font-bold text-[24px]">
           Welcome to KEY GLOBAL NETWORK
         </div>
