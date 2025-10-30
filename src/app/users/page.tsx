@@ -1,7 +1,12 @@
 import React from "react";
+import UserHome from "./UserHome";
 
 const Users = () => {
-  return <div className="text-base-0">Dashboard</div>;
+  return (
+    <div>
+      <UserHome />
+    </div>
+  );
 };
 
 export default Users;
